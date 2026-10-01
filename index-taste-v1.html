@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Khoa Tran — Taste Skill Variant</title>
+<style>
+html,body{margin:0;width:100%;height:100%;background:#f7f7f5}
+#site{display:block;width:100%;height:100dvh;border:0}
+</style>
+</head>
+<body>
+<iframe id="site" src="index.html" title="Khoa Tran portfolio — Taste Skill variant"></iframe>
+<script>
+const css = `
+:root{--taste-bg:#f7f7f5;--taste-surface:#fff;--taste-ink:#15151b;--taste-muted:#666672;--taste-line:#d9d9df;--taste-accent:#6656c5;--taste-accent-dark:#4e3fad;--taste-dark:#17171e}
+body{background:var(--taste-bg)!important}
+#kw{max-width:none!important;background:var(--taste-bg)!important;color:var(--taste-ink)!important;font-family:ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif!important}
+#kw .top{min-height:68px!important;padding:0 5.5%!important;background:#f7f7f5!important;color:var(--taste-ink)!important;border-bottom:1px solid var(--taste-line)!important;box-shadow:none!important}
+#kw .brand{font-size:17px!important;font-weight:780!important;letter-spacing:-.35px!important}
+#kw nav{gap:30px!important;font-size:13px!important;font-weight:650!important}
+#kw nav a{position:relative}
+#kw nav a:after{content:"";position:absolute;left:0;right:100%;bottom:-6px;height:1px;background:var(--taste-accent);transition:right .2s ease}
+#kw nav a:hover{text-decoration:none!important}
+#kw nav a:hover:after{right:0}
+
+#kw-home{min-height:min(690px,calc(100dvh - 68px))!important;padding:72px 5.5% 54px!important;display:grid!important;grid-template-columns:repeat(12,minmax(0,1fr))!important;grid-template-rows:auto 1fr auto!important;column-gap:24px!important;align-items:start!important;border-bottom:1px solid var(--taste-line)!important;background:var(--taste-bg)!important}
+#kw-home .label{grid-column:1/8!important;margin:0 0 34px!important;color:var(--taste-accent)!important;font-size:11px!important;letter-spacing:.14em!important;font-weight:760!important}
+#kw-home h1{grid-column:1/9!important;grid-row:2!important;align-self:center!important;max-width:920px!important;margin:0!important;font-size:clamp(48px,6.4vw,86px)!important;line-height:.96!important;letter-spacing:-.055em!important;font-weight:780!important;color:var(--taste-ink)!important}
+#kw-home .intro{grid-column:9/13!important;grid-row:2!important;align-self:end!important;max-width:370px!important;margin:0 0 22px!important;font-size:18px!important;line-height:1.48!important;color:var(--taste-muted)!important}
+#kw-home .hero-actions{grid-column:9/13!important;grid-row:3!important;margin:0!important;align-self:end!important}
+#kw .primary-action{display:inline-flex!important;align-items:center!important;justify-content:center!important;min-height:44px!important;padding:0 20px!important;border-radius:999px!important;background:var(--taste-accent)!important;border-color:var(--taste-accent)!important;color:#fff!important;box-shadow:none!important;font-size:13px!important;font-weight:740!important}
+#kw .primary-action:hover{background:var(--taste-accent-dark)!important;text-decoration:none!important;transform:translateY(-1px)}
+
+#kw .proof-band{padding:26px 5.5%!important;display:grid!important;grid-template-columns:1.1fr 2.4fr!important;gap:42px!important;align-items:center!important;background:var(--taste-surface)!important;border-bottom:1px solid var(--taste-line)!important}
+#kw .proof-band-intro span{display:block;font-size:11px;text-transform:uppercase;letter-spacing:.14em;color:var(--taste-accent);font-weight:760}
+#kw .proof-band-intro p{margin:6px 0 0!important;font-size:14px!important;color:var(--taste-muted)!important}
+#kw .proof-strip{display:grid!important;grid-template-columns:repeat(3,1fr)!important;gap:0!important;margin:0!important;border:0!important;background:transparent!important}
+#kw .proof-strip>div,#kw .proof-strip>a{min-width:0!important;padding:2px 24px!important;border-left:1px solid var(--taste-line)!important;background:transparent!important;border-radius:0!important;text-decoration:none!important}
+#kw .proof-strip strong{display:block!important;font-size:32px!important;line-height:1!important;letter-spacing:-.045em!important;color:var(--taste-ink)!important}
+#kw .proof-strip span{display:block!important;margin-top:7px!important;font-size:12px!important;line-height:1.35!important;color:var(--taste-muted)!important}
+
+#kw .projects{padding:68px 5.5% 82px!important;background:var(--taste-bg)!important;border:0!important}
+#kw .projects>h2{font-size:clamp(38px,5vw,64px)!important;letter-spacing:-.045em!important;line-height:1!important;color:var(--taste-ink)!important}
+#kw .projects-intro{max-width:650px!important;margin:16px 0 28px!important;color:var(--taste-muted)!important;font-size:16px!important;line-height:1.55!important}
+#kw .project-controls{margin:0 0 34px!important}
+#kw .filters{gap:7px!important}
+#kw .filters button{border-radius:999px!important;padding:8px 13px!important;border:1px solid var(--taste-line)!important;background:transparent!important;color:var(--taste-muted)!important;font-size:12px!important;box-shadow:none!important}
+#kw .filters button[aria-pressed=true]{background:var(--taste-ink)!important;border-color:var(--taste-ink)!important;color:#fff!important}
+#kw .work-group-head{padding-top:18px!important;border-top:1px solid var(--taste-line)!important;margin-bottom:18px!important}
+#kw .work-group-head h3{font-size:14px!important;letter-spacing:0!important;color:var(--taste-muted)!important;font-weight:650!important}
+#kw .grid{gap:18px!important}
+#kw .featured-group .grid{grid-template-columns:1.12fr .88fr!important}
+#kw .featured-group .project:first-child{grid-column:1/-1!important;display:grid!important;grid-template-columns:1.18fr .82fr!important;align-items:stretch!important}
+#kw .featured-group .project:first-child .project-visual-cover,#kw .featured-group .project:first-child .vida-photo-cover,#kw .featured-group .project:first-child .vida-brand-cover,#kw .featured-group .project:first-child .conative-cover{height:340px!important;min-height:340px!important}
+#kw .featured-group .project:first-child .project-content{display:flex!important;flex-direction:column!important;justify-content:center!important;padding:34px!important}
+#kw .featured-group .project:first-child h3{font-size:32px!important;line-height:1.05!important;letter-spacing:-.035em!important}
+#kw .project{border:1px solid var(--taste-line)!important;border-radius:2px!important;box-shadow:none!important;background:var(--taste-surface)!important;transition:transform .2s ease,border-color .2s ease!important}
+#kw .project:hover{box-shadow:none!important;transform:translateY(-2px)!important;border-color:#b9b7c7!important}
+#kw .project-content{background:var(--taste-surface)!important}
+#kw .project h3{color:var(--taste-ink)!important}
+#kw .project p{color:var(--taste-muted)!important}
+#kw .project-foot{border-top:1px solid var(--taste-line)!important;color:var(--taste-accent-dark)!important}
+#kw .project a.read-case{color:var(--taste-accent-dark)!important;background:transparent!important;border:0!important;border-radius:0!important;padding:0!important;font-weight:760!important}
+#kw .project a.read-case:hover{color:var(--taste-ink)!important;background:transparent!important}
+
+#kw-about{background:var(--taste-dark)!important;color:#fff!important;padding:78px 5.5% 86px!important}
+#kw-about .label{color:#aaa1ef!important}
+#kw-about .about-name{font-size:clamp(42px,5vw,68px)!important;letter-spacing:-.045em!important;color:#fff!important}
+#kw-about .about-lead{max-width:790px!important;color:#c7c7d0!important;font-size:20px!important}
+#kw-about .badges span{background:transparent!important;color:#c7c7d0!important;border:1px solid #3a3a45!important;border-radius:999px!important}
+#kw-about .secondary-action{display:inline-flex!important;align-items:center!important;min-height:42px!important;padding:0 18px!important;border-radius:999px!important;background:#fff!important;color:var(--taste-dark)!important;border:1px solid #fff!important}
+#kw-about .about-columns{border-top:1px solid #35353f!important}
+#kw-about h3,#kw-about .career strong,#kw-about .decision-principle strong{color:#fff!important}
+#kw-about p,#kw-about .career small,#kw-about .decision-principle p{color:#aaaab5!important}
+#kw-about .decision-principles{gap:0!important;border-top:1px solid #35353f!important}
+#kw-about .decision-principle{background:transparent!important;border:0!important;border-bottom:1px solid #35353f!important;border-radius:0!important;padding:20px 0!important}
+#kw-about .decision-principle+.decision-principle{padding-left:20px!important;border-left:1px solid #35353f!important}
+#kw-about .career{border-bottom:1px solid #35353f!important}
+#kw-about .connect-panel{background:#22222b!important;border:1px solid #3a3a45!important;border-radius:2px!important}
+#kw-about .connect-panel a{background:transparent!important;border-bottom:1px solid #3a3a45!important;border-radius:0!important;color:#fff!important}
+#kw-about .connect-panel small{color:#9d9da9!important}
+#kw footer{background:#0f0f14!important;color:#fff!important;border-top:1px solid #2f2f38!important}
+#kw footer a,#kw footer p{color:#aaaab5!important}
+
+@media(prefers-reduced-motion:no-preference){
+#kw-home .label,#kw-home h1,#kw-home .intro,#kw-home .hero-actions{animation:taste-in .5s ease both}
+#kw-home h1{animation-delay:.04s}#kw-home .intro{animation-delay:.09s}#kw-home .hero-actions{animation-delay:.13s}
+@keyframes taste-in{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+}
+@media(max-width:900px){
+#kw-home{min-height:auto!important;grid-template-columns:1fr!important;display:block!important;padding:54px 5.5% 46px!important}
+#kw-home .label{margin-bottom:28px!important}
+#kw-home h1{font-size:clamp(44px,10vw,68px)!important;line-height:.98!important}
+#kw-home .intro{max-width:600px!important;margin:28px 0 22px!important;font-size:17px!important}
+#kw .proof-band{grid-template-columns:1fr!important;gap:20px!important}
+#kw .featured-group .grid{grid-template-columns:1fr!important}
+#kw .featured-group .project:first-child{grid-column:auto!important;display:block!important}
+#kw .featured-group .project:first-child .project-visual-cover,#kw .featured-group .project:first-child .vida-photo-cover,#kw .featured-group .project:first-child .vida-brand-cover,#kw .featured-group .project:first-child .conative-cover{height:220px!important;min-height:220px!important}
+#kw .featured-group .project:first-child .project-content{padding:22px!important}
+#kw .featured-group .project:first-child h3{font-size:24px!important}
+}
+@media(max-width:650px){
+#kw .top{min-height:62px!important;padding:0 18px!important}
+#kw nav{gap:16px!important;font-size:12px!important}
+#kw-home{padding:42px 20px 38px!important}
+#kw-home h1{font-size:43px!important;letter-spacing:-.045em!important}
+#kw .proof-band{padding:22px 20px!important}
+#kw .proof-strip{grid-template-columns:1fr!important}
+#kw .proof-strip>div,#kw .proof-strip>a{padding:14px 0!important;border-left:0!important;border-top:1px solid var(--taste-line)!important}
+#kw .projects{padding:48px 20px 58px!important}
+#kw .projects-intro{font-size:15px!important}
+#kw-about{padding:54px 20px 62px!important}
+#kw-about .decision-principle+.decision-principle{padding-left:0!important;border-left:0!important}
+}
+`;
+
+document.getElementById('site').addEventListener('load',()=>{
+  const frame=document.getElementById('site');
+  const d=frame.contentDocument;
+  if(!d) return;
+
+  const hero=d.querySelector('#kw-home');
+  if(hero){
+    const h1=hero.querySelector('h1');
+    const intro=hero.querySelector('.intro');
+    const action=hero.querySelector('.primary-action');
+    if(h1) h1.innerHTML='I turn complex product problems into measurable growth.';
+    if(intro) intro.innerHTML='Product leader working across commerce, AI and data products — from customer discovery to scaled delivery.';
+    if(action){action.textContent='View work'; action.setAttribute('href','#kw-project');}
+
+    const proof=hero.querySelector('.proof-strip');
+    if(proof){
+      const band=d.createElement('section');
+      band.className='proof-band';
+      band.setAttribute('aria-label','Selected evidence');
+      band.innerHTML='<div class="proof-band-intro"><span>Selected evidence</span><p>Scale and outcomes, not vanity metrics.</p></div>';
+      hero.after(band);
+      band.appendChild(proof);
+    }
+  }
+
+  const projects=d.querySelector('#kw-project');
+  if(projects){
+    const h2=projects.querySelector(':scope > h2');
+    if(h2) h2.textContent='Selected work';
+    if(!projects.querySelector('.projects-intro')){
+      const p=d.createElement('p');
+      p.className='projects-intro';
+      p.textContent='Different product problems. The same operating principle: make the decision clear, reduce uncertainty, then measure the outcome.';
+      h2?.after(p);
+    }
+  }
+
+  const style=d.createElement('style');
+  style.id='taste-skill-v1';
+  style.textContent=css;
+  d.head.appendChild(style);
+
+  d.title='Khoa Tran | Taste Skill Portfolio Variant';
+});
+</script>
+</body>
+</html>
